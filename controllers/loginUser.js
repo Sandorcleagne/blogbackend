@@ -22,22 +22,22 @@ const loginUser = async (req, res) => {
             response: { user, token },
           });
         } else {
-          res.status(400).send({
+          res.status(200).send({
             baseResponse: { status: 0, msg: "credentials doesn't match" },
           });
         }
       } else {
         res
-          .status(400)
+          .status(200)
           .send({ baseResponse: { status: 0, msg: "User not exist" } });
       }
     } else {
       res
-        .status(400)
+        .status(200)
         .send({ baseResponse: { status: 0, msg: "All feilds are required" } });
     }
   } catch (error) {
-    res.status(400).send({
+    res.status(200).send({
       baseResponse: { status: 0, msg: "unable to login" },
       response: { error },
     });
