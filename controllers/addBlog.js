@@ -6,16 +6,18 @@ const addBlogs = async (req, res) => {
     blogTitle,
     blogCategory,
     blogContent,
+    // tag,
     authorName,
     createdAt,
     updatedAt,
   } = req.body;
-  if (blogId && blogTitle && blogContent && blogCategory && authorName) {
+  if (blogTitle && blogContent && blogCategory && authorName) {
     const doc = new blogModel({
       blogId: blogId,
       blogTitle: blogTitle,
       blogCategory: blogCategory,
       blogContent: blogContent,
+      // tag: tag,
       authorName: authorName,
       createdAt: createdAt,
       updatedAt: updatedAt,
