@@ -11,7 +11,6 @@ const addBlogs = async (req, res) => {
     createdAt,
     updatedAt,
   } = req.body;
-  console.log("req.body", req.body);
   if (blogTitle && blogContent && blogCategory && authorName) {
     const doc = new blogModel({
       blogId: blogId,
