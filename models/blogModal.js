@@ -7,7 +7,8 @@ const blogSchema = new mongoose.Schema({
   blogCategory: { type: Array },
   blogContent: { type: String, require: true, trim: true },
   authorName: { type: String, require: true, trim: true },
-  // tag: { type: Array },
+  authorId: { type: String, require: true, trimg: true },
+  coverImage: { type: String, require: true },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });
